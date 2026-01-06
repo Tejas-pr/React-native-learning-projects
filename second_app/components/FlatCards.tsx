@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Alert, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function FlatCards() {
@@ -6,9 +6,9 @@ export default function FlatCards() {
     <View>
       <Text style={styles.headingText}>FlatCards</Text>
       <View style={styles.container}>
-        <View style={[styles.cards, styles.cardOne]}>
+        <Pressable onPress={() => Alert.alert("sdlkfnklnl")} style={[styles.cards, styles.cardOne]}>
             <Text style={styles.text}>Red</Text>
-        </View>
+        </Pressable>
         <View style={[styles.cards, styles.cardTwo]}>
             <Text style={styles.text}>Green</Text>
         </View>

@@ -9,15 +9,22 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FlatCards from './components/FlatCards';
 
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
+import '@/global.css';
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView>
+    
+    <GluestackUIProvider mode="dark">
+      <SafeAreaView>
       <ScrollView>
         <FlatCards />
       </ScrollView>
     </SafeAreaView>
+    </GluestackUIProvider>
+  
   );
 };
 
